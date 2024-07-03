@@ -1,0 +1,119 @@
+/* Wave text loader made by: csozi | Website: english.csozi.hu*/
+
+.text {
+  color: rgb(73, 156, 159);
+  font-weight: bolder;
+}
+
+@keyframes letter {
+  0% {
+    font-size: 30px;
+  }
+
+  50% {
+    font-size: 40px;
+  }
+
+  100% {
+    font-size: 30px;
+  }
+}
+
+.letter {
+  animation: letter 1s infinite;
+}
+
+.letter1 {
+  animation-delay: 0s;
+}
+
+.letter2 {
+  animation-delay: -0.9s;
+}
+
+.letter3 {
+  animation-delay: -0.8s;
+}
+
+.letter4 {
+  animation-delay: -0.7s;
+}
+
+.letter5 {
+  animation-delay: -0.6s;
+}
+
+.letter6 {
+  animation-delay: -0.5s;
+}
+
+.letter7 {
+  animation-delay: -0.4s;
+}
+
+.letter8 {
+  animation-delay: -0.3s;
+}
+
+.letter9 {
+  animation-delay: -0.2s;
+}
+
+.letter10 {
+  animation-delay: -0.1s;
+}
+.btn-cart {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    border: none;
+    background-color: transparent;
+    position: relative;
+  }
+  
+  .btn-cart::after {
+    content: attr(data-quantity);
+    width: fit-content;
+    height: fit-content;
+    position: absolute;
+    font-size: 15px;
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    opacity: 0;
+    visibility: hidden;
+    transition: .2s linear;
+    top: 115%;
+  }
+  
+  .icon-cart {
+    width: 24.38px;
+    height: 30.52px;
+    transition: .2s linear;
+  }
+  
+  .icon-cart path {
+    fill: rgb(24, 72, 193);
+    transition: .2s linear;
+  }
+  
+  .btn-cart:hover > .icon-cart {
+    transform: scale(1.2);
+  }
+  
+  .btn-cart:hover > .icon-cart path {
+    fill: rgb(186, 34, 233);
+  }
+  
+  .btn-cart:hover::after {
+    visibility: visible;
+    opacity: 1;
+    top: 105%;
+  }
+  
+  .quantity {
+    display: none;
+  }
+  
