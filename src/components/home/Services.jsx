@@ -19,8 +19,8 @@ const Services = () => {
         <>
         <div className="row d-flex mx-auto  mt-5 w-100">
             {
-                serviceData.map((curEle) => (
-                        <div className="col-sm-3" key={curEle.bg}>
+                serviceData.map((curEle,index) => (
+                        <div className="col-sm-3" key={index}>
                             <div className="card border-0 rounded-0" style={{backgroundColor:curEle.bg , height:"240px"}}>
                                 <div className="card-body d-flex flex-column justify-content-center align-items-center" >
                                     <h5 className="card-title border-0" style={icon}>{curEle.icon}</h5>

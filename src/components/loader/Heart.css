@@ -1,0 +1,13 @@
+.heart {
+    color: grey; /* Default color */
+    font-size: 20px;
+}
+
+.heart:hover {
+    color: rgb(193, 74, 74);
+    cursor: pointer;
+}
+
+.heart.clicked {
+    color: rgb(193, 74, 74);
+}

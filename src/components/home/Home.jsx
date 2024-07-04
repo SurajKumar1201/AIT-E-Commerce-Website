@@ -5,21 +5,14 @@ import BigDisc from './BigDisc'
 import NewArrivals from './NewArrivals'
 import BestSales from './BestSales'
 
-
-
 const Home = () => {
   return (
     <>
-     
-      
       <SliderC/>
       <Services/>
       <BigDisc/>
       <NewArrivals/>
-      <BestSales/>
-      
-      
-      
+      <BestSales/>     
      
     </>
   )

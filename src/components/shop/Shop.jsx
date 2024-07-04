@@ -2,10 +2,14 @@ import React, { useState } from 'react';
 import Banner from '../banner/Banner';
 import { FaSearch } from "react-icons/fa";
 import { useDispatch, useSelector } from 'react-redux';
-import { CiStar, CiCirclePlus } from "react-icons/ci";
+import { CiCirclePlus } from "react-icons/ci";
 import Select from 'react-select';
 import  { showToast } from '../loader/Toaster';
 import {addToCart} from '../../redux/productAction/ActionCreator'
+import Heart from '../loader/Heart';
+import { Link } from 'react-router-dom';
+import { faStar } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 
 const Shop = () => {
@@ -83,15 +87,20 @@ const Shop = () => {
       <div>
         <div className='container my-5'>
           <div className="row row-cols-md-3 g-4 w-75 mx-auto">
-            {filteredProducts.map((curEle) => (
-              <div className="col mt-3 mx-auto" key={curEle.id}>
+            {filteredProducts.map((curEle,index) => (
+              <div className="col mt-3 mx-auto" key={index}>
                 <div className="card mx-auto" style={{ height: "410px" }}>
-                  <img src={curEle.imgUrl} style={{ height: "200px" }} className="img-fluid card-img-top object-fit-contain rounded mx-auto d-block" alt={curEle.productName} />
+                <div style={{position:"absolute",right:"20px", top:"10px" }}><Heart/></div>
+                <Link to={`/singleProduct/${curEle.id}`}>  <img src={curEle.imgUrl} style={{ height: "200px" }} className="img-fluid  card-img-top object-fit-contain rounded mx-auto d-block" alt="..." /></Link>
                   <div className="card-body">
-                    <h5 className="card-title">{curEle.productName}</h5>
-                    <p className="card-text">
-                      <CiStar /><CiStar /><CiStar /><CiStar /><CiStar />
-                    </p>
+                  <Link className='text-decoration-none text-secondary' to={`/singleProduct/${curEle.id}`}><h5 className="card-title">{curEle.productName}</h5> </Link>
+                  {[1, 2, 3, 4, 5].map((index) => (
+                          <FontAwesomeIcon
+                            key={index}
+                            icon={faStar}
+                            style={{ color: index <= curEle.avgRating ? 'gold' : 'grey' }}
+                          />
+                        ))}
                   </div>
                   <div className="card-body d-flex justify-content-between">
                     <p className='card-title fs-2 fw-bold'>${curEle.price}</p>

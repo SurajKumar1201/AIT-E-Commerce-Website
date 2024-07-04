@@ -21,8 +21,8 @@ const SliderC = () => {
   return (
     <div className='container-fluid mt-3  ' >
       <Slider  {...settings}>
-        {sliderData.map((curEle) => (
-          <div key={curEle.id} className='row d-flex justify-content-center  align-items-center'  >
+        {sliderData.map((curEle,index) => (
+          <div key={index} className='row d-flex justify-content-center  align-items-center'  >
             <div className='col-md-5 ms-auto  col-sm-12 p-3 ' >
               <p style={{ fontSize: "40px" }} className='w-75 heading mt-2'>{curEle.title}</p>
               <p className='w-75'>{curEle.desc}</p>
