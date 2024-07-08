@@ -1,4 +1,5 @@
 import 'bootstrap/dist/css/bootstrap.min.css'
+import { SpeedInsights } from '@vercel/speed-insights/next';
 import Routing from './routes/Routing';
 import NavBar from './components/navBar/NavBar';
 import Footer from './components/Footer'
@@ -13,6 +14,7 @@ function App() {
       <NavBar />
       <Routing />
       <Footer />
+      <SpeedInsights />
      
     </>
 
