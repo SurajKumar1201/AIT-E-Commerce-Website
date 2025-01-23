@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import logo from '../../Assets/Images/AchiversIt-Logo.png';
+import logo from '../../Assets/Images/Logo.jpg';
 import { IoPerson } from "react-icons/io5";
 import { FaCartShopping } from "react-icons/fa6";
 import { Navbar, Nav, Container } from 'react-bootstrap';  // Importing components from react-bootstrap
